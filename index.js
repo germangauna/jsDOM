@@ -82,10 +82,67 @@
 
 
 
-let contenedor = document.getElementById("contenedor"); // asignacion de nuevo padre
-let parrafo = document.createElement("p"); //creacion
-parrafo.innerHTML = "<h1>Hola  A todos</h1>";// asignacion de contenido
+// let contenedor = document.getElementById("contenedor"); // asignacion de nuevo padre
+// let parrafo = document.createElement("p"); //creacion
+// parrafo.innerHTML = "<h1>Hola  A todos</h1>";// asignacion de contenido
 
-//asignaion de un padre nuevo padre contenedor
+// //asignaion de un padre nuevo padre contenedor
 
-contenedor.append(parrafo);
+// contenedor.append(parrafo);
+
+//para eliminar un id
+
+// let saludo = document.getElementById("saludo");
+// saludo.remove();
+
+
+// creamos una lista ordenada des js
+
+// let personas = ["manuel", "adrian", "jeronimo", "andres"];
+// let lista = document.getElementById("personas");
+
+// for (const persona of personas) {
+//     let li = document.createElement("li");
+//     li.innerHTML = persona;
+//     lista.append(li);
+    
+// }
+
+
+//agregando un objeto al DOM
+
+
+// let producto = {
+//     id: 1,
+//     nombre: "camisa",
+//     precio: 1000
+// };
+
+// let coontenedor = document.getElementById("contenedor");
+// coontenedor.innerHTML = `
+//                          <h3> ID: ${producto.id}</h3>
+//                           <p> NOMBRE: ${producto.nombre}</p>
+//                           <b> PRECIO: ${producto.precio}</b>
+//                           `;
+
+//creamnos un array con varios obajetos
+
+const productos = [
+    {id: 1, nombre: "zapato", precio:1000},
+    {id: 2, nombre: "remera", precio:700},
+    {id: 3, nombre: "pantalon", precio:900},
+    {id: 4, nombre: "camisa", precio: 800},
+];
+
+let contenedor = document.getElementById("contenedor");
+
+for (const producto of productos) {
+    let div = document.createElement("div");
+    div.innerHTML =  `
+                         <h3> ID: ${producto.id}</h3>
+                         <p> NOMBRE: ${producto.nombre}</p>
+                         <b> PRECIO: ${producto.precio}</b>
+     `;
+    
+     contenedor.append(div);
+}
