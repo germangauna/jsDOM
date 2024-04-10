@@ -127,22 +127,126 @@
 
 //creamnos un array con varios obajetos
 
-const productos = [
-    {id: 1, nombre: "zapato", precio:1000},
-    {id: 2, nombre: "remera", precio:700},
-    {id: 3, nombre: "pantalon", precio:900},
-    {id: 4, nombre: "camisa", precio: 800},
-];
+// const productos = [
+//     {id: 1, nombre: "zapato", precio:1000},
+//     {id: 2, nombre: "remera", precio:700},
+//     {id: 3, nombre: "pantalon", precio:900},
+//     {id: 4, nombre: "camisa", precio: 800},
+// ];
 
-let contenedor = document.getElementById("contenedor");
+// let contenedor = document.getElementById("contenedor");
 
-for (const producto of productos) {
-    let div = document.createElement("div");
-    div.innerHTML =  `
-                         <h3> ID: ${producto.id}</h3>
-                         <p> NOMBRE: ${producto.nombre}</p>
-                         <b> PRECIO: ${producto.precio}</b>
-     `;
+// for (const producto of productos) {
+//     let div = document.createElement("div");
+//     div.innerHTML =  `
+//                          <h3> ID: ${producto.id}</h3>
+//                          <p> NOMBRE: ${producto.nombre}</p>
+//                          <b> PRECIO: ${producto.precio}</b>
+//      `;
     
-     contenedor.append(div);
-}
+//      contenedor.append(div);
+// }
+
+
+
+// // ahora haremos que un usuario por medio de prompt elija un producto y aparesca en pantalla
+
+
+// //creacion del array
+// const productos = [
+//     {id: 1, nombre: "zapato", precio:1000},
+//     {id: 2, nombre: "remera", precio:700},
+//     {id: 3, nombre: "pantalon", precio:900},
+//     {id: 4, nombre: "camisa", precio: 800},
+// ];
+
+// //traemos el id del html 
+
+// let contenedor = document.getElementById("contenedor");
+
+// //creamos la variable  que sea igual al prompt para que el usuario ingrese el producto que este buscando.
+
+// let nombre = prompt("ingrese el nombre del producto");
+
+// // creamos la variable producto que sea igual a el array con el find el cual es el encargado de buscar el
+// // producto arrow function que el nombre que busque el usuario sea igual iagual igual al nombre
+
+// let producto = productos.find(item => item.nombre === nombre);
+
+// //lo que se va a reflejar en el DOM, o sea, el producto que elija el usuario de los que nosotros 
+// //tengamos en el array. con el contenedor y el innerHTML 
+
+// contenedor.innerHTML = `
+//                         <h3> ID: ${producto.id} </h3>
+//                         <p> NOMBRE: ${producto.nombre}</p>
+//                         <b> PRECIO: ${producto.precio}</b>
+// `;
+
+
+// // ahora haremos que un usuario por medio del filter traiga los productos por el precio menor, por medio de parseInt
+
+
+// //creacion del array
+// const productos = [
+//     {id: 1, nombre: "zapato", precio:1000},
+//     {id: 2, nombre: "remera", precio:700},
+//     {id: 3, nombre: "pantalon", precio:900},
+//     {id: 4, nombre: "camisa", precio: 800},
+// ];
+
+// //traemos el id del html 
+
+// let contenedor = document.getElementById("contenedor");
+
+// //creamos la variable  que sea igual al prompt para que el usuario ingrese el producto que este buscando.
+
+// let precio = parseInt(prompt("ingrese el precio menor"));
+
+// // creamos la variable precioFiltrados, que sea igual a productos.filter y este va a tener el item arrow 
+// //function item.precio y el precio que nosotros queremos que filtre, que nos muestre los productos con el precio
+// //menor del que nosotros pongamos.
+
+// let productosFiltrados = productos.filter(item => item.precio > precio);
+
+// // Ahora creamos el forOf para que recorra el array y pero que recorra los filtrados,
+// //para eso creamos un div, y va a traer el innerHTML del div y dentro como queremos que aparesca en el DOM.
+
+
+// for (const producto of productosFiltrados) {
+//     let div = document.createElement("div");
+//     div.innerHTML = `
+//                         <h3> ID: ${producto.id} </h3>
+//                         <p> NOMBRE: ${producto.nombre}</p>
+//                         <b> PRECIO: ${producto.precio}</b>
+// `;
+
+// //Para terminar tendremos que asignarle un padre cuando creamos, en este caso le asignamos el contendor como padre,
+// //o sea, que el div que creamos este dentro del div llamado contenedor
+
+// contenedor.append(div);
+// }
+
+// //llamamos a los div del html por medio del querySelector
+
+// //let div = document.querySelector(".contenedor");// nos trae solo un div
+
+// let div = document.querySelectorAll(".contenedor");// nos trae una NodeList, los dos div en un array
+
+
+// console.log(div);
+
+//llamaremos un parrafo que esta dentro de un id con el querySelector
+
+let parrafo = document.querySelectorAll("#contenedor p");
+
+console.log(parrafo);
+
+
+
+
+
+
+
+
+
+
